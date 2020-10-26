@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  webapp:
+    build: .
+    container_name: PHP-Template
+    ports:
+      - '80:80'
+    volumes:
+      - .:/workspaces/app/
+    command: sleep infinity
+
+networks:
+  default:
+    external:
+      name: my-network
+
+     
